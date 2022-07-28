@@ -3,14 +3,7 @@ import { useSelector } from 'react-redux';
 
 const DragonProfile = () => {
   const dragons = useSelector((state) => state.dragon);
-  let dragonCount = 0;
-
-  dragons.map((dr) => {
-    if (dr.reserved === true) {
-      dragonCount += 1;
-    }
-    return dragonCount;
-  });
+  const filterDragons = dragons.filter((drag) => drag.reserved === true);
 
   return (
     <>
@@ -18,14 +11,8 @@ const DragonProfile = () => {
       <div>
 
         {
-            dragonCount > 0 ? (
-              dragons.map((drag) => <div key={drag.id}>{drag.name}</div>)
-            )
-              : (
-                <div>
-                  You have no dragons
-                </div>
-              )
+
+           filterDragons.map((drag) => <div key={drag.id}>{drag.name}</div>)
 
            }
 
