@@ -11,8 +11,9 @@ const DragonProfile = () => {
       <div>
 
         {
-
-           filterDragons.map((drag) => <div key={drag.id}>{drag.name}</div>)
+            filterDragons && filterDragons.length > 0
+              ? filterDragons.map((drag) => <div key={drag.id}>{drag.name}</div>)
+              : <div>No Dragons</div>
 
            }
 
