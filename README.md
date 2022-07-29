@@ -1,3 +1,8 @@
+
+    Create a route and a view component. Use for the page navigation links and style active class to indicate which section/page the user is currently on (underline active navigation link).
+    Create a directory for all Redux state slice files.
+
+
 # Getting Started with Create React App and Redux
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
